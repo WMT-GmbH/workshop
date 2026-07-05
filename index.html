@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibe Coding Workshop</title>
+  <link rel="stylesheet" href="shared/style.css">
+</head>
+<body>
+  <main>
+    <h2>Workshop Pages</h2>
+    <ul id="pages"></ul>
+  </main>
+
+  <script src="shared/layout.js" defer></script>
+  <script defer>
+    fetch("pages.json")
+      .then((r) => r.json())
+      .then((pages) => {
+        const list = document.getElementById("pages");
+        for (const page of pages) {
+          const li = document.createElement("li");
+          li.innerHTML = `<a href="pages/${page.name}/"><strong>${page.title}</strong></a> - ${page.description}`;
+          list.appendChild(li);
+        }
+      });
+  </script>
+</body>
+</html>
