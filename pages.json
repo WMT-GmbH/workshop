@@ -1,3 +1,4 @@
 [
-  { "name": "_example", "title": "Example Page", "description": "A short one-line description of what this page is about." }
+  { "name": "_example", "title": "Example Page", "description": "A short one-line description of what this page is about." },
+  { "name": "dimi", "title": "Emoji Mosaic", "description": "Turn any photo into a mosaic of color-matched emoji." }
 ]
